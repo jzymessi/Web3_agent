@@ -16,6 +16,13 @@
         "FIRECRAWL_API_KEY": "fc-418d6c173bfc4681875c360001e8e396"
       },
         "transport": "stdio"
+    },
+    "crypto-price-server": {
+      "command": "python",
+      "args": [
+        "/home/leo/project/mcp_agent/Web3_agent/crypto_price_server.py"
+      ],
+      "transport": "stdio"
     }
     }  
 }
