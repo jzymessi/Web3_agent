@@ -1,0 +1,21 @@
+{
+    "mcpServers": {
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "/home/leo/project/mcp_agent/mcp-get-weather"
+        ],
+        "transport": "stdio"
+      },
+      "mcp-server-firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-418d6c173bfc4681875c360001e8e396"
+      },
+        "transport": "stdio"
+    }
+    }  
+}
