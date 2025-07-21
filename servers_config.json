@@ -23,6 +23,22 @@
         "/home/leo/project/mcp_agent/Web3_agent/crypto_price_server.py"
       ],
       "transport": "stdio"
+    },
+    "token-info-server": {
+      "command": "python",
+      "args": [
+        "/home/leo/project/mcp_agent/Web3_agent/token_info_server.py"
+      ],
+      "transport": "stdio"
+    },
+    "smart-contract-status-server": {
+      "command": "python",
+      "args": [
+        "/home/leo/project/mcp_agent/Web3_agent/smart_contract_status_server.py",
+        "--apikey",
+        "你的Etherscan API Key"
+      ],
+      "transport": "stdio"
     }
     }  
 }

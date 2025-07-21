@@ -1,0 +1,11 @@
+python-dotenv
+httpx
+langchain-deepseek
+langchain-mcp-adapters
+langchain-openai
+langgraph
+mcp
+openai
+fastapi
+uvicorn
+streamlit
