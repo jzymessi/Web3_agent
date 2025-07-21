@@ -1,0 +1,44 @@
+{
+    "mcpServers": {
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "/home/leo/project/mcp_agent/mcp-get-weather"
+        ],
+        "transport": "stdio"
+      },
+      "mcp-server-firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-418d6c173bfc4681875c360001e8e396"
+      },
+        "transport": "stdio"
+    },
+    "crypto-price-server": {
+      "command": "python",
+      "args": [
+        "services/crypto_price_server.py"
+      ],
+      "transport": "stdio"
+    },
+    "token-info-server": {
+      "command": "python",
+      "args": [
+        "services/token_info_server.py"
+      ],
+      "transport": "stdio"
+    },
+    "smart-contract-status-server": {
+      "command": "python",
+      "args": [
+        "services/smart_contract_status_server.py",
+        "--apikey",
+        "你的Etherscan API Key"
+      ],
+      "transport": "stdio"
+    }
+    }  
+}
