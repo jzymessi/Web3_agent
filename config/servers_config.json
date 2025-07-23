@@ -22,6 +22,9 @@
       "args": [
         "services/crypto_price_server.py"
       ],
+      "env": {
+        "COINGECKO_API_BASE": "https://api.coingecko.com/api/v3/simple/price"
+      },
       "transport": "stdio"
     },
     "token-info-server": {
@@ -34,10 +37,21 @@
     "smart-contract-status-server": {
       "command": "python",
       "args": [
-        "services/smart_contract_status_server.py",
-        "--apikey",
-        "你的Etherscan API Key"
+        "services/smart_contract_status_server.py"
       ],
+      "env": {
+        "ETHERSCAN_API_KEY": "WDWGK9FYB6HUA99EXRK9XCMBCJW7DF7W2C"
+      },
+      "transport": "stdio"
+    },
+    "eth-balance-server": {
+      "command": "python",
+      "args": [
+        "services/eth_balance_server.py"
+      ],
+      "env": {
+        "ETHERSCAN_API_KEY": "WDWGK9FYB6HUA99EXRK9XCMBCJW7DF7W2C"
+      },
       "transport": "stdio"
     }
     }  

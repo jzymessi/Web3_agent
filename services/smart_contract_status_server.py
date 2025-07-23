@@ -1,4 +1,5 @@
 import json
+import os
 import httpx
 from typing import Any
 from mcp.server.fastmcp import FastMCP
@@ -12,7 +13,7 @@ def get_apikey():
     args, _ = parser.parse_known_args()
     return args.apikey
 
-ETHERSCAN_API_KEY = get_apikey()
+ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
 
 
 ETHERSCAN_API_BASE = "https://api.etherscan.io/api"

@@ -8,11 +8,11 @@ from dotenv import load_dotenv
 from langgraph.prebuilt import create_react_agent
 from langchain_openai import ChatOpenAI
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from langgraph.checkpoint.memory import InMemorySaver
+# from langgraph.checkpoint.memory import InMemorySaver
 from pydantic import SecretStr
 
 # 设置记忆存储
-checkpointer = InMemorySaver()
+# checkpointer = InMemorySaver()
 
 # 读取提示词
 def load_prompt() -> str:
@@ -58,8 +58,10 @@ class MCPAgent:
         prompt = load_prompt()
         self.agent = create_react_agent(model=model, 
                                         tools=tools,
-                                        prompt=prompt,
-                                        checkpointer=checkpointer)
+                                        prompt=prompt)
+                                        # checkpointer=checkpointer)
+        # 导出 graph 对象供 langgraph dev 使用
+        self.graph = self.agent
         self.initialized = True
 
     async def agent_respond(self, user_input: str) -> str:
@@ -82,4 +84,14 @@ class MCPAgent:
             return f"⚠️  出错: {exc}"
 
     async def cleanup(self):
-        pass 
+        pass
+
+
+# agent.py 最后添加
+
+import asyncio
+
+agent_instance = MCPAgent()
+asyncio.run(agent_instance.init())
+
+graph = agent_instance.graph  # LangGraph Dev/Studio 要找的变量
