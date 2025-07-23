@@ -1,112 +1,119 @@
 # Web3 Agent
 
-这是一个基于LangGraph和MCP（Model Context Protocol）构建的Web3智能体，能够执行加密货币和区块链相关的查询任务。
+[中文文档](README_zh.md)
 
-## 功能特点
+A Web3 intelligent agent built on LangGraph and MCP (Model Context Protocol), capable of executing cryptocurrency and blockchain-related query tasks.
 
-该智能体具备以下核心功能：
+## Features
 
-1. **加密货币价格查询**：查询比特币、以太坊等加密货币的实时价格
-2. **以太坊账户余额查询**：查询指定以太坊地址的ETH余额
-3. **智能合约状态查询**：查询智能合约的余额、所有者和功能列表等信息
-4. **代币信息查询**：查询代币的详细信息，包括名称、符号、合约地址、总供应量、价格、交易量等
-5. **文件读写**：支持本地文件的读写操作
-6. **网页爬取**：支持网页内容的抓取功能
+This agent has the following core functionalities:
 
-## 技术架构
+1. **Cryptocurrency Price Query**: Query real-time prices of cryptocurrencies like Bitcoin and Ethereum
+2. **Ethereum Account Balance Query**: Query the ETH balance of a specified Ethereum address
+3. **Smart Contract Status Query**: Query the balance, owner, and function list of smart contracts
+4. **Token Information Query**: Query detailed token information, including name, symbol, contract address, total supply, price, trading volume, etc.
+5. **File Read/Write**: Support for local file operations
+6. **Web Crawling**: Support for web content scraping
 
-- **LangGraph**：用于构建智能体的工作流和状态管理
-- **MCP (Model Context Protocol)**：用于连接各种服务和工具
-- **LangChain**：用于构建与大语言模型的交互
-- **OpenRunner**：提供大语言模型支持
+## Technical Architecture
 
-## 项目结构
+- **LangGraph**: Used for agent workflow and state management
+- **MCP (Model Context Protocol)**: Used to connect various services and tools
+- **LangChain**: Used to build interactions with large language models
+- **OpenRunner**: Provides large language model support
+
+## Project Structure
 
 ```
-├── agent/                # 智能体核心代码
+├── agent/                # Agent core code
 │   ├── __init__.py
-│   └── agent.py         # 智能体主要实现
-├── config/              # 配置文件
+│   └── agent.py         # Main agent implementation
+├── config/              # Configuration files
 │   ├── __init__.py
-│   └── servers_config.json  # MCP服务器配置
-├── services/            # 各种服务实现
+│   └── servers_config.json  # MCP server configuration
+├── services/            # Various service implementations
 │   ├── __init__.py
-│   ├── crypto_price_server.py    # 加密货币价格查询服务
-│   ├── eth_balance_server.py     # 以太坊余额查询服务
-│   ├── smart_contract_status_server.py  # 智能合约状态查询服务
-│   └── token_info_server.py      # 代币信息查询服务
-├── utils/               # 工具函数
+│   ├── crypto_price_server.py    # Cryptocurrency price query service
+│   ├── eth_balance_server.py     # Ethereum balance query service
+│   ├── smart_contract_status_server.py  # Smart contract status query service
+│   └── token_info_server.py      # Token information query service
+├── utils/               # Utility functions
 │   └── __init__.py
-├── agent_prompts.txt    # 智能体提示词
-├── langgraph.json       # LangGraph配置
-├── pyproject.toml       # 项目依赖配置
-└── servers_config.json  # 服务器配置（根目录副本）
+├── agent_prompts.txt    # Agent prompts
+├── langgraph.json       # LangGraph configuration
+├── pyproject.toml       # Project dependency configuration
+└── servers_config.json  # Server configuration (root directory copy)
 ```
 
-## 环境要求
+## Requirements
 
 - Python 3.12+
-- 依赖包：详见pyproject.toml
+- Dependencies: See pyproject.toml for details
 
-## 安装步骤
+## Installation
 
-1. 克隆仓库
+1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Web3_agent.git
+git clone https://github.com/jzymessi/Web3_agent.git
 cd Web3_agent
 ```
 
-2. 安装依赖
+2. Install dependencies
 
 ```bash
 uv install -e .
 ```
 
-3. 配置环境变量
+3. Configure environment variables
 
-创建`.env`文件，添加以下内容：
+Create a `.env` file and add the following content:
 
 ```
 LLM_API_KEY=your_api_key_here
-BASE_URL=your_base_url_here  # 可选
-MODEL=openrunner-chat  # 或其他支持的模型
+BASE_URL=your_base_url_here  # Optional
+MODEL=openrunner-chat  # Or other supported models
 ETHERSCAN_API_KEY=your_etherscan_api_key_here
 ```
 
-## 使用方法
+## Usage
 
-1. 启动智能体
+1. Start the agent
 
 ```bash
 python -m agent.agent
 ```
 
-2. 使用LangGraph开发工具（可选）
+2. Use LangGraph development tools (optional)
 
 ```bash
 langgraph dev
 ```
 
-## 示例查询
+## Example Queries
 
-- 查询加密货币价格："比特币和以太坊的价格是多少？"
-- 查询以太坊余额："查询地址0x123...的ETH余额"
-- 查询智能合约状态："查询合约0x456...的状态"
-- 查询代币信息："查询USDT的详细信息"
+- Query cryptocurrency prices: "What are the prices of Bitcoin and Ethereum?"
+- Query Ethereum balance: "Check the ETH balance of address 0x123..."
+- Query smart contract status: "Check the status of contract 0x456..."
+- Query token information: "Get detailed information about USDT"
 
-## API密钥
+## API Keys
 
-本项目需要以下API密钥：
+This project requires the following API keys:
 
-- **LLM_API_KEY**：用于访问OpenRunner大语言模型
-- **ETHERSCAN_API_KEY**：用于访问以太坊区块链数据
-- **FIRECRAWL_API_KEY**（可选）：用于网页爬取功能
+- **LLM_API_KEY**: For accessing the OpenRunner large language model
+- **ETHERSCAN_API_KEY**: For accessing Ethereum blockchain data
+- **FIRECRAWL_API_KEY** (optional): For web crawling functionality
 
-## 贡献指南
+## Contribution Guidelines
 
-欢迎提交问题和拉取请求，共同改进这个项目。
+Issues and pull requests are welcome to improve this project together.
 
-## 许可证
+## License
 
 [MIT](LICENSE)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jzymessi/Web3_agent&type=Date)](https://www.star-history.com/#jzymessi/Web3_agent&Date)
+
