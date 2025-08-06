@@ -2,18 +2,38 @@
 
 [中文文档](README_zh.md)
 
-A Web3 intelligent agent built on LangGraph and MCP (Model Context Protocol), capable of executing cryptocurrency and blockchain-related query tasks.
+Web3 Agent is a Web3 intelligent agent framework built on LangGraph and LangChain, designed to help users interact with on-chain data and protocols in a simpler way.
+The current version supports:
+
+Basic Agent framework setup
+
+Web3 RPC request interaction (such as querying on-chain information)
+
+Extensible Tool module design (for future integration of DeFi / DAO operations)
+
+Simple multi-turn conversation control flow (based on LangGraph)
+
+This project is still in early development, welcome interested friends to participate in contributions and discussions!
 
 ## Features
 
-This agent has the following core functionalities:
+✅ Agent framework initialization (LangChain / LangGraph)
 
-1. **Cryptocurrency Price Query**: Query real-time prices of cryptocurrencies like Bitcoin and Ethereum
-2. **Ethereum Account Balance Query**: Query the ETH balance of a specified Ethereum address
-3. **Smart Contract Status Query**: Query the balance, owner, and function list of smart contracts
-4. **Token Information Query**: Query detailed token information, including name, symbol, contract address, total supply, price, trading volume, etc.
-5. **File Read/Write**: Support for local file operations
-6. **Web Crawling**: Support for web content scraping
+✅ RPC interaction basic module (query account balance / call contract functions)
+
+✅ Tool module encapsulation examples (convenient for adding more on-chain operation tools)
+
+✅ Simple conversation flow control examples
+
+⚠️ Future plans:
+
+DeFi operation templates (such as Swap, liquidity management)
+
+DAO proposal query and automatic voting
+
+Airdrop claim automation process
+
+Multi-chain cross-chain interaction support
 
 ## Technical Architecture
 
@@ -45,12 +65,12 @@ This agent has the following core functionalities:
 └── servers_config.json  # Server configuration (root directory copy)
 ```
 
-## Requirements
+## Environment Requirements
 
 - Python 3.12+
 - Dependencies: See pyproject.toml for details
 
-## Installation
+## Installation Steps
 
 1. Clone the repository
 
@@ -78,7 +98,7 @@ ETHERSCAN_API_KEY=your_etherscan_api_key_here
 
 ## Usage
 
-1. Start the agent
+1. Start the intelligent agent
 
 ```bash
 python -m agent.agent
@@ -105,13 +125,32 @@ This project requires the following API keys:
 - **ETHERSCAN_API_KEY**: For accessing Ethereum blockchain data
 - **FIRECRAWL_API_KEY** (optional): For web crawling functionality
 
+## Support Project Development
+
+This project is independently developed and open-sourced by me. If you find it helpful, welcome to donate to support me in developing more features 🙏
+
+
+### 🟣 Web3 Wallet Donation (ETH / USDT / DAI, etc.)
+- **Wallet Address**: `0x3515F1f2852F7C49B6602D3979cEc8921B766174`
+- **Supported Chains**:
+  - Ethereum Mainnet
+  - Arbitrum One (Recommended)
+  - Polygon (Matic)
+  - Binance Smart Chain (BSC)
+- **Supported Assets**:
+  - ETH
+  - USDT (ERC20/BEP20)
+  - DAI / BUSD, etc.
+
 ## Contribution Guidelines
 
-Issues and pull requests are welcome to improve this project together.
+Welcome to submit issues and pull requests to improve this project together.
 
 ## License
 
 [MIT](LICENSE)
+
+## Project History
 
 ## Star History
 

@@ -1,0 +1,148 @@
+# Aave Protocol Overview
+
+Aave Protocol Overview
+Documentation
+Products
+Resources
+Developers
+App
+Interact with Aave easily.
+GHO
+The Aave-native stablecoin.
+Blog
+The latest news and updates.
+Brand
+Assets, examples and guides.
+FAQ
+Answers to common questions.
+Help & Support
+Guides, articles and more.
+Governance
+The Aave Governance forum.
+Documentation
+Technical guides for developers.
+Security
+Audit reports and information.
+Bug Bounty
+Report responsibly and get rewarded.
+Open App
+Introduction
+Overview
+Concepts
+Liquidity Protocol
+Supply
+Borrow
+Repay
+Withdraw
+Liquidations
+Risks
+Flash Loans
+Primitives
+Liquidity Pool
+Reserve
+Incentives
+Oracle
+Governance
+Umbrella
+AAVE
+GHO
+Developers
+Aave V3
+Aave V3 on Aptos
+Overview
+Smart Contracts
+Pool
+Access Control
+Pool Configurator
+Oracles
+Aave Logic
+Tokenization
+Incentives
+Integrations
+Smart Contracts
+Pool
+L2 Pool
+Wrapped Token Gateway
+View Contracts
+Incentives
+Tokenization
+Interest Rate Strategy
+Access Control Manager
+Oracles
+Pool Addresses Provider
+Pool Configurator
+Swap Features
+Vaults
+GHO
+Governance
+Umbrella
+Flash Loans
+Credit Delegation
+Legacy Versions
+V1
+V2
+Testing & Debugging
+Aave Vaults
+Resources
+Security & Audits
+FAQ
+Addresses
+Parameters
+Access Controls
+Code Licensing
+Changelog
+Web3
+Glossary
+
+
+GHO
+The Aave-native stablecoin.
+Learn More
+
+
+Aave Documentation
+
+
+Aave is a decentralised non-custodial liquidity protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market while earning interest, and borrowers can access liquidity by providing collateral that exceeds the borrowed amount.
+
+
+Get Familiar with Aave
+
+
+Concepts
+Learn the basics.
+Governance
+Community governance process.
+Addresses
+Protocol smart contracts.
+Parameters
+View market parameters.
+Security
+Security audits and resources.
+
+
+Use Aave
+
+
+App
+Supply, borrow, vote, and more.
+GHO
+Learn about the GHO stablecoin.
+Next
+Concepts
+ 
+Aave.com provides information and resources about the fundamentals of the decentralised non-custodial liquidity protocol called the Aave Protocol, comprised of open-source self-executing smart contracts that are deployed on various permissionless public blockchains, such as Ethereum (the "Aave Protocol" or the "Protocol"). Aave Labs does not control or operate any version of the Aave Protocol on any blockchain network.
+Resources
+Brand
+FAQ
+Help & Support
+Governance
+Developers
+Documentation
+Technical Paper
+Security
+Bug Bounty
+Company
+Privacy Policy
+Terms of Use
+Contact
